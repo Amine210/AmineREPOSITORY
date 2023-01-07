@@ -1,0 +1,13 @@
+.app__NavigationDots{
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+   right: 2rem;
+    div{
+        width: 10px;
+        height: 10px;
+        background-color: gray;
+        border-radius: 50%;
+        margin-bottom: 1rem;
+    }
+}

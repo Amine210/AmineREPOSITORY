@@ -1,0 +1,18 @@
+.app__socialMedia{
+    padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  position: absolute;
+  bottom: 0;
+  div{
+    background-color: white;
+    width: 30px ;
+    height: 30px ;;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    
+  }
+}
