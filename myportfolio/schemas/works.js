@@ -24,14 +24,14 @@ export default {
         title: 'Code Link',
         type: 'string',
       },
-      {
+      /*{
         name: 'imgUrl',
         title: 'ImageUrl',
         type: 'image',
         options: {
           hotspot: true,
         },
-      },
+      },*/
    
       {
         name: 'tags',

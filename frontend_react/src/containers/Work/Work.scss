@@ -4,29 +4,33 @@
     display: flex;
     flex-direction: column;
     margin-top: 5rem;
+    padding-bottom:8rem ;
     justify-content: center;
     align-items: center;
+
+    h1{
+      font-size: 5rem;
+      padding-bottom:3rem ;
+    }
   }
   
   .app__work--data {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
     flex-wrap: wrap;
      margin-top: 2rem;
-     width: 60%;
+     width: 100%;
   }
   
   .app__profile-item {
-    width: 200px;
+    width: 45%;
+    height: 500px;
     display: flex;
     flex-direction: column;
     margin: 2rem;
     position: relative;
-    background-color: var(--white-color);
+    background-color: var(--secondary-color);
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-    border-radius: 0.5rem ;
-
     justify-content: center; 
     align-items: center;
     padding: 0.5rem;
@@ -36,6 +40,11 @@
       height: 170px;
       border-radius: 15px;
       object-fit: cover;
+    }
+
+    &:hover{
+      background-color: var(--primary-color);
+      color: var(--secondary-color);;
     }
   
     @media screen and (min-width: 2000px) {
@@ -47,21 +56,28 @@
       }
     }
 
+    @media screen and (max-width: 1300px) {
+      width: 80%;
+    }
+    
+
     &:hover{
       
       .app__profile-item--icon{
         display: flex;
+        color: var(--secondary-color);
       }
       img{
         filter: brightness(50%);
       }
+      
       
     }
   
   }
 
   .app__work-filter{
-    width: 60%;
+    width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -70,11 +86,11 @@
     gap: 1rem;
     div{
      
-        width: 150px;
+        width: 300px;
         height: 40px;
         background-color: var(--white-color);
         box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-        border-radius: 0.5rem ;
+        
         &:hover{
             cursor: pointer; 
         }
@@ -85,11 +101,17 @@
 .app__profile-item--icon{
   position: absolute; 
   left: 50%;
-  top: 50%;
+  top: 100%;
   transform: translate(-50%,-180%);
   display: none;
   gap:0.5rem ;
-  font-size: 1.5rem;
-  color: white;
+  font-size: 3.5rem;
+  color: var(--primary-color);
   z-index: 1;
+}
+
+.work--title{
+  font-size: 5rem;
+  font-family:'Cormorant SC', serif;
+  text-transform: uppercase;
 }

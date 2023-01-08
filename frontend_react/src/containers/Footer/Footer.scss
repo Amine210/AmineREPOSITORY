@@ -2,7 +2,8 @@
     height: 200px;
     display: flex;
     height: auto;
-    background-color: var(--white-color);
+    background-color: var(--secondary-color);
+    color:  var(--primary-color) ;
     
     
 
@@ -39,6 +40,7 @@
 
 .app__footer--text{
     width: 60%;
+    color: var(--primary-color);
 }
 .app__footer-container{
     display: flex;
@@ -63,12 +65,13 @@
         width: 8rem;
         border-radius: 0.8rem;
         background-color: inherit;
-        border: 2px solid ;
+        border: 2px solid    var(--primary-color);
+        color:  var(--primary-color);;
         font-weight: bold;
         &:hover{
             cursor: pointer;
-            background-color:black; 
-            color: var(--white-color);
+            background-color:var(--primary-color); 
+            color:var(--secondary-color)
             
         }
     }

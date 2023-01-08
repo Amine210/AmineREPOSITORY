@@ -55,13 +55,31 @@
       color: var(--black-color);
     }
   }
+
+  .ul-text{
+    list-style-type: none;
+  }
+
+  .li-text{
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-family: 'Cormorant SC', serif;
+    line-height: 2.5rem;
+    &:hover{
+      cursor: pointer;
+    }
+    transition: color 1s;
+    
+  }
   
   .head-text {
-    font-size: 2.75rem;
+    font-size: 2rem;
     font-weight: 800;
     text-align: center;
-    color: white;
+    color: var(--secondary-color);
     text-transform: capitalize;
+    font-family: 'Cormorant SC', serif;
   
     span {
       color: var(--secondary-color);
@@ -80,7 +98,8 @@
     font-size: 1.1rem;
     text-align: left;
     color: var(--gray-color);
-    line-height: 1.5;
+    line-height: 2;
+    font-family:'Modern Antiqua', cursive;;
   
     @media screen and (min-width: 2000px) {
       font-size: 1.75rem;
@@ -191,3 +210,4 @@
       padding: 2rem;
     }
   }
+

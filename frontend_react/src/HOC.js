@@ -9,8 +9,7 @@ const HOC = (props) => {
     <section className='app__Hoc'>
       <SocialMedia/>
        <props.wrappedComponent/>
-       <NavigationDots isActive={props.isActive}/>
-    </section>
+      </section>
   
   )
 }

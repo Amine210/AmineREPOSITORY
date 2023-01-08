@@ -37,7 +37,10 @@ import spotify from '../assets/spotify.png';
 
 import about1 from '../assets/aboutBg1.jpg';
 
+import me from '../assets/me.png';
+
 export default {
+  me,
   email,
   mobile,
   api,
