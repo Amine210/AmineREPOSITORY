@@ -37,6 +37,7 @@
     
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 0.5rem;
     width: 21.5rem;
     margin-top: 8rem;
@@ -45,7 +46,7 @@
     }
 
     @media screen and (max-width: 1200px) {
-        width: 18rem;
+        width: 20rem;
       }
     
       @media screen and (max-width: 450px) {

@@ -23,7 +23,7 @@
   }
   
   .app__profile-item {
-    width: 45%;
+    width: 40%;
     height: 500px;
     display: flex;
     flex-direction: column;
@@ -111,7 +111,11 @@
 }
 
 .work--title{
-  font-size: 5rem;
+  font-size: 4rem;
   font-family:'Cormorant SC', serif;
   text-transform: uppercase;
+
+  @media screen and (max-width:1200px) {
+    font-size: 3rem;
+  }
 }

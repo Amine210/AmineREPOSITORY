@@ -58,14 +58,18 @@
 
   .ul-text{
     list-style-type: none;
+    @media screen and (max-width:1200px) {
+      display: flex;
+      gap: 2rem;
+    }
   }
 
   .li-text{
     color: var(--secondary-color);
     text-decoration: none;
-    font-size: 1.4rem;
+    font-size: 2.4rem;
     font-family: 'Cormorant SC', serif;
-    line-height: 2.5rem;
+    line-height: 3.5rem;
     &:hover{
       cursor: pointer;
     }

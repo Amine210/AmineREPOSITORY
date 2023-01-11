@@ -7,7 +7,6 @@ import './Hoc.scss'
 const HOC = (props) => {
   return (
     <section className='app__Hoc'>
-      <SocialMedia/>
        <props.wrappedComponent/>
       </section>
   

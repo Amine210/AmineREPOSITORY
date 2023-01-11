@@ -13,8 +13,8 @@ import './About.scss';
 const About = () => {
     
   const index={
-    'About Me1':0 ,
-    'About Me2':1 ,
+    'Biographie':0 ,
+    'Education':1 ,
     'About Me3':2 ,
     'About Me4':3 ,
 
@@ -40,7 +40,7 @@ const About = () => {
   },[abouts])
 
 
-  const [state,setState]=useState('About Me1')
+  const [state,setState]=useState('Biographie')
 
 
 
@@ -67,49 +67,38 @@ const About = () => {
   return (
     
     <section className='app__about'>
-      {console.log('render')}
-     {/* <h2 className="head-text">I Know that <span>Good Design</span> <br />means  <span>Good Business</span></h2>
-      
-      <div className="app__profiles">
-        {abouts.map((about, index) => (
-          <motion.div
-            initial={{opacity:0}}
-            whileInView={{ opacity: 1 }}
-            whileHover={{ scale: 1.1 , cursor: 'pointer'}}
-            transition={{ duration: 0.4, type: 'tween' }}
-            className="app__profile-item"
-            key={about.title + index}
-          >
-            <img src={urlFor(about.imgUrl)} alt={about.title} />
-            <h2 className="bold-text" style={{ marginTop: 20 }}>{about.title}</h2>
-            <p className="p-text" style={{ marginTop: 10 }}>{about.description}</p>
-          </motion.div>
-        ))}
-        </div>*/}
+    
+    <div>
         <div className='app__about-left'>
-            <h1 className="app__about-left--numeration"><span>0</span><motion.span style={{position:"absolute"}}
+            <div className="app__about-left--numeration"><span>0</span><motion.span 
               key={state}
               initial={{y:-50,opacity:0}} 
               animate={{y:5,opacity:1}} 
-              transition={{duration:0.75}}
-            >{(index[`${state}`]+1)}</motion.span></h1>
+              transition={{duration:1.75}}
+            >{(index[`${state}`]+1)}</motion.span></div>
             <ul className='ul-text'>
-              {['About Me1','About Me2','About Me3','About Me4'].map(((element,index)=>{
+              {['Biographie','Education'].map(((element,index)=>{
                   return  <li key={element}  onClick={()=>{
                     setState(element)
                     setdisplayedP(abouts[index].description)
                   }} className='li-text'
-                  style={element==state?{color:'red'}:{}}>
+                  style={element==state?{color:`#6b7688`}:{}}>
                     {element}
                   </li>
                 }))}
             </ul>
         </div>
         <div className='app__about-right'>
-          <h3 className='p-text'>{state}</h3>
+         
           <div className='head-text--container'>
-            <motion.h1  className='head-text'>
-            {sentence}
+            <motion.h1 key={state} className='head-text'>
+            {state.split("").map((char,index)=>{
+              return <motion.span  
+              initial={{opacity:0 ,margin:50}}
+              animate={{opacity:1,margin:5}}
+              transition={{delay:index*0.2}}
+              style={{color:"#6b7688" }} className='head-text'>{char}</motion.span>
+            })}
             </motion.h1>
           </div>
           
@@ -129,6 +118,10 @@ const About = () => {
           </p>
 
         </div>
+    </div>
+
+   
+    
     </section>
   );
 };
